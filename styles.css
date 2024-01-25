@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .gameboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: lightblue; /* Background color for the table */
+    position: relative;
+  }
+
+  #deck img {
+    height: 20vw;
+    width: 15vw;
+    border-radius: 5%;
+    margin-left: 5vw;
+  }
+
+  .deck-slot-container {
+    display: flex;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  #deck {
+    border-radius: 4%;
+    margin-right: 1vw;
+  }
+
+  #slot {
+    width: 15vw; /* Adjust the slot size */
+    height: 20vw;
+    border-radius: 5%;
+    background-color: lightgray; /* Slot background color */
+    margin-right: 5vw;
+  }
+
+  .player {
+    border: 2px solid black; /* Style the player area */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+  }
+
+  .player#player-1 {
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .player#player-2 {
+    top: 50%;
+    right: 10%; /* Adjust the distance from the right */
+    transform: translateY(-50%);
+  }
+
+  .player#player-3 {
+    bottom: 60%; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .player#player-4 {
+    top: 50%;
+    left: 10%; /* Adjust the distance from the left */
+    transform: translateY(-50%);
+  }
+
+  .card {
+    width: 20vw; /* Adjust the card size */
+    height: 13vh;
+    background-color: white; /* Card background color */
+    margin: 1vw; /* Space between cards */
+  }
+
+  .player#player-you {
+    flex-direction: row; /* Kortene skal ordnes horisontalt */
+    bottom: 10%; /* Plasser denne mot bunnen av skjermen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; 
+  }
+
+  .player.opponent {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card.face {
+    background-image: url(./cards/10-S.png);
+  }
+
+  .card.back {
+    background-image: url(./cards/BACK.png);
+  }
+}
